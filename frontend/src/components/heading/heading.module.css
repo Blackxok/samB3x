@@ -1,0 +1,18 @@
+.h1 {
+	font-size: 27px;
+	margin: 0;
+	line-height: 35px;
+	font-weight: 600;
+}
+.h2 {
+	font-size: 22px;
+	margin: 0;
+	line-height: 35px;
+	font-weight: 500;
+}
+.h3 {
+	font-size: 20px;
+	margin: 0;
+	line-height: 27px;
+	font-weight: 400;
+}

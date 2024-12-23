@@ -1,0 +1,29 @@
+.tag {
+	display: inline-block;
+	margin: 5px 5px 0 0;
+	border-radius: 5px;
+}
+
+.s {
+	padding: 5px 10px;
+	font-size: 12px;
+}
+.m {
+	padding: 5px 10px;
+	font-size: 12px;
+}
+.re {
+	color: var(--white);
+	background: red;
+	font-weight: bold;
+}
+.gr {
+	color: var(--green);
+	background: var(--green-light);
+	font-weight: bold;
+}
+.pr {
+	color: var(--primary);
+	background: transparent;
+	border: 1px solid var(--primary);
+}
