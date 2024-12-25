@@ -3,18 +3,59 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const dotenv_1 = require("dotenv");
+// .env faylini yuklash
+const dotenv_1 = __importDefault(require("dotenv"));
 const express_1 = __importDefault(require("express"));
-(0, dotenv_1.config)();
+const body_parser_1 = __importDefault(require("body-parser"));
+const db_json_1 = __importDefault(require("./db.json"));
+dotenv_1.default.config();
 const app = (0, express_1.default)();
-app.use(express_1.default.json());
 const PORT = process.env.PORT || 4100;
-function appStart() {
+// Middleware
+app.use(body_parser_1.default.json());
+// Xatoliklarni qayta ishlovchi middleware
+const errorHandler = (err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ message: err.message || 'Ichki server xatosi' });
+};
+// Router komponentini yaratish
+const router = express_1.default.Router();
+// Bosh sahifa route
+app.get('/', (req, res) => {
+    res.status(200).json(db_json_1.default);
+});
+// /page-find yo'nalishi uchun POST so'rovi
+router.post('/page-find', (req, res, next) => {
     try {
-        app.listen(PORT, () => console.log(`listening on port- ${PORT}`));
+        const { firstCategory } = req.body;
+        const categoryData = db_json_1.default.page[firstCategory];
+        if (!categoryData) {
+            return res.status(404).json({ message: 'Kategoriya topilmadi' });
+        }
+        res.status(200).json(categoryData);
     }
-    catch (err) {
-        console.log(err);
+    catch (error) {
+        next(error);
     }
-}
-appStart();
+});
+// /page-find/:id yo'nalishi uchun GET so'rovi
+router.get('/page-find/:id', (req, res, next) => {
+    try {
+        const product = db_json_1.default.productPage.find(c => c._id === req.params.id);
+        if (!product) {
+            return res.status(404).json({ message: 'Mahsulot topilmadi' });
+        }
+        res.status(200).json(product);
+    }
+    catch (error) {
+        next(error);
+    }
+});
+// Routerni ulash
+app.use('/api', router);
+// Xatolikni qayta ishlovchi middleware-ni ulash
+app.use(errorHandler);
+// Serverni ishga tushirish
+app.listen(PORT, () => {
+    console.log(`Server ${PORT} portida ishga tushdi`);
+});

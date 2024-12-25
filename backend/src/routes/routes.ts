@@ -1,10 +1,10 @@
-import express, { Request, Response } from 'express'
-import data from '../db.json'
+import express from 'express'
+import pageRoutes from './pageRoutes'
+import productRoutes from './productRoutes'
 
 const router = express.Router()
 
-router.get('/', (req: Request, res: Response) => {
-	res.status(200).json(data) //Nega return yoq???
-})
+router.use('/', pageRoutes)
+router.use('/', productRoutes)
 
 export default router

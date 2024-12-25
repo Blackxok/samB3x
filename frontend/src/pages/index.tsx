@@ -1,13 +1,16 @@
+import axios from 'axios'
+import { GetServerSideProps } from 'next'
 import { useState } from 'react'
 import { Button, Card, Heading, Input, Rating, Tag, Text } from '../components'
 import Textarea from '../components/textarea/textarea'
+import Layout from '../layout/layout'
 
 export default function Home() {
 	const [isClicked, setIsClicked] = useState(false)
 	const [rating, setRating] = useState<number>(4)
 
 	return (
-		<main className={`flex min-h-screen flex-col items-center justify-between p-24`}>
+		<Layout>
 			<Heading tag='h1'>Assalomu alekum</Heading>
 			<Text>something</Text>
 			<Tag color='re'>some</Tag>
@@ -38,6 +41,16 @@ export default function Home() {
 			<Card color='primary' style={{ marginTop: '20px' }}>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, maiores!
 			</Card>
-		</main>
+		</Layout>
 	)
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+	const { data } = await axios.post('http://127.0.0.1:4100/page-find', { fistCategory: 1 })
+
+	return {
+		props: {
+			data: data,
+		},
+	}
 }
