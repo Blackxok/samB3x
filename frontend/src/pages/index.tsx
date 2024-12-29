@@ -47,7 +47,7 @@ function Home() {
 export default withLayout(Home)
 
 export const getServerSideProps: GetServerSideProps = async () => {
-	const { data } = await axios.post('http://localhost:4100/api/page-find', { firstCategory: 1 })
+	const { data } = await axios.post('http://localhost:3000/api/page-find', { firstCategory: 1 })
 	return {
 		props: {
 			data: data,

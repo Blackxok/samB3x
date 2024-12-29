@@ -8,12 +8,10 @@ import Sidebar from './sidebar/sidebar'
 function Layout({ children }: LayoutProps): JSX.Element {
 	return (
 		<div className={styles.wrapper}>
-			<Header />
-			<div>
-				<Sidebar />
-				<div>{children}</div>
-			</div>
-			<Footer />
+			<Header className={styles.header} />
+			<Sidebar className={styles.sidebar} />
+			<div className={styles.body}>{children}</div>
+			<Footer className={styles.footer} />
 		</div>
 	)
 }
