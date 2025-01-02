@@ -3,9 +3,10 @@ import { GetServerSideProps } from 'next'
 import { useState } from 'react'
 import { Button, Card, Heading, Input, Rating, Tag, Text } from '../components'
 import Textarea from '../components/textarea/textarea'
+import { MenuItem } from '../interface/menu.interface'
 import { withLayout } from '../layout/layout'
 
-function Home() {
+function Home({ firstCategory, menu }: HomeProps): JSX.Element {
 	const [isClicked, setIsClicked] = useState(false)
 	const [rating, setRating] = useState<number>(4)
 
@@ -41,16 +42,32 @@ function Home() {
 			<Card color='primary' style={{ marginTop: '20px' }}>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, maiores!
 			</Card>
+
+			<ol>
+				{menu.map(m => (
+					<li key={m._id.secondCategory}>{m._id.secondCategory}</li>
+				))}
+			</ol>
 		</>
 	)
 }
 export default withLayout(Home)
 
-export const getServerSideProps: GetServerSideProps = async () => {
-	const { data } = await axios.post('http://localhost:3000/api/page-find', { firstCategory: 1 })
+export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
+	const firstCategory = 0
+	const { data: menu } = await axios.post<MenuItem[]>('http://localhost:3000/api/page-find', {
+		firstCategory,
+	})
+
 	return {
 		props: {
-			data: data,
+			menu,
+			firstCategory,
 		},
 	}
+}
+
+interface HomeProps extends Record<string, unknown> {
+	firstCategory: number
+	menu: MenuItem[]
 }
