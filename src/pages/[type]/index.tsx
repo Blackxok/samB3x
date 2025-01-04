@@ -1,48 +1,42 @@
-import { MenuItem } from '@/src/interface/menu.interface'
-import { withLayout } from '@/src/layout/layout'
-import { firstLevelMenu } from '@/src/layout/menu/menu'
-import axios from 'axios'
-import { GetServerSideProps } from 'next'
+import { GetServerSideProps } from 'next';
+import React from 'react';
+import { firstLevelMenu } from '../../helpers/constants';
+import axios from 'axios';
+import { MenuItem } from '../../interfaces/menu.interface';
+import { withLayout } from '../../layout/layout';
 
-function Type() {
-	return <div>Type</div>
-}
+const Type = () => {
+	return <div>Type</div>;
+};
 
-export default withLayout(Type)
+export default withLayout(Type);
 
 export const getServerSideProps: GetServerSideProps<TypeProps> = async ({ query }) => {
-	const { type } = query
+	const { type } = query;
 
 	if (!type) {
-		return { notFound: true }
+		return { notFound: true };
 	}
 
-	const firstCategoryItem = firstLevelMenu.find(menu => menu.route === type)
+	const firstCategoryItem = firstLevelMenu.find(m => m.route === type);
 
 	if (!firstCategoryItem) {
-		return { notFound: true }
+		return { notFound: true };
 	}
 
-	try {
-		const { data: menu } = await axios.post<MenuItem[]>(
-			`${process.env.NEXT_PUBLIC_API_URL}/api/page-find`,
-			{
-				firstCategory: firstCategoryItem.id,
-			},
-		)
+	const { data: menu } = await axios.post<MenuItem[]>(`${process.env.NEXT_PUBLIC_DOMAIN}/api/page-find`, {
+		firstCategory: firstCategoryItem.id,
+	});
 
-		return {
-			props: {
-				menu,
-				firstCategory: firstCategoryItem.id,
-			},
-		}
-	} catch (error) {
-		return { notFound: true }
-	}
-}
+	return {
+		props: {
+			menu,
+			firstCategory: firstCategoryItem.id,
+		},
+	};
+};
 
-export interface TypeProps extends Record<string, unknown> {
-	menu: MenuItem[]
-	firstCategory: number
+interface TypeProps extends Record<string, unknown> {
+	menu: MenuItem[];
+	firstCategory: number;
 }

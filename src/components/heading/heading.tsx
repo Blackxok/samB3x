@@ -1,15 +1,17 @@
-import style from './heading.module.css'
-import { IHeading } from './heading.props'
+import { HeadingProps } from './heading.props';
+import styles from './heading.module.css';
 
-export default function Heading({ tag, children }: IHeading): JSX.Element {
+const Heading = ({ tag, children }: HeadingProps): JSX.Element => {
 	switch (tag) {
 		case 'h1':
-			return <h1 className={style.h1}>{children}</h1>
+			return <h1 className={styles.h1}>{children}</h1>;
 		case 'h2':
-			return <h1 className={style.h2}>{children}</h1>
+			return <h2 className={styles.h2}>{children}</h2>;
 		case 'h3':
-			return <h1 className={style.h3}>{children}</h1>
+			return <h3 className={styles.h3}>{children}</h3>;
 		default:
-			return <>{children}</>
+			<>{children}</>;
 	}
-}
+};
+
+export default Heading;

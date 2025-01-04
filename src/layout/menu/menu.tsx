@@ -1,29 +1,28 @@
-import { AppContext } from '@/src/context/app.context'
-import { IfirstLevelMenu, PageItem } from '@/src/interface/menu.interface'
-import { PageCategory } from '@/src/interface/page.interface'
-import cn from 'classnames'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useContext, useState } from 'react'
-import { FaBook, FaChalkboardTeacher } from 'react-icons/fa'
-import styles from './menu.module.css'
+import Link from 'next/link';
+import { useContext } from 'react';
+import { AppContext } from '../../context/app.cotext';
+import { firstLevelMenu } from '../../helpers/constants';
+import styles from './menu.module.css';
+import cn from 'classnames';
+import { IFirstLevelMenu, PageItem } from '../../interfaces/menu.interface';
+import { useRouter } from 'next/router';
 
-export const firstLevelMenu: IfirstLevelMenu[] = [
-	{ route: 'courses', name: 'Courses', icon: <FaChalkboardTeacher />, id: PageCategory.Courses },
-	{ route: 'books', name: 'Books', icon: <FaBook />, id: PageCategory.Books },
-]
-export default function Menu(): JSX.Element {
-	const { menu, firstCategory, setMenu } = useContext(AppContext)
-	const [isOpen, setIsOpen] = useState<string[]>([])
-	const router = useRouter()
+const Menu = (): JSX.Element => {
+	const { menu, firstCategory, setMenu } = useContext(AppContext);
+	const router = useRouter();
 
-	const toggleCategories = (secondCategory: string) => {
-		setIsOpen(prev =>
-			prev.includes(secondCategory)
-				? prev.filter(e => e !== secondCategory)
-				: [...prev, secondCategory],
-		)
-	}
+	const openSecondBLock = (category: string) => {
+		setMenu &&
+			setMenu(
+				menu.map(c => {
+					if (c._id.secondCategory === category) {
+						c.isOpened = !c.isOpened;
+					}
+
+					return c;
+				})
+			);
+	};
 
 	const buildFirstLevel = () => {
 		return (
@@ -41,50 +40,56 @@ export default function Menu(): JSX.Element {
 									<span>{c.name}</span>
 								</div>
 							</Link>
-							{c.id === firstCategory && buildSecondLevel(c)}
+							{c.id == firstCategory && buildSecondLevel(c)}
 						</>
 					</div>
 				))}
 			</>
-		)
-	}
-	const buildSecondLevel = (menuItem: IfirstLevelMenu) => {
+		);
+	};
+
+	const buildSecondLevel = (menuItem: IFirstLevelMenu) => {
 		return (
 			<div className={styles.secondBlock}>
-				{menu.map(q => (
-					<div key={q._id.secondCategory}>
-						<div
-							className={styles.secondLevel}
-							onClick={() => toggleCategories(q._id.secondCategory)}
-						>
-							{q._id.secondCategory}
-						</div>
-						<div
-							className={cn(styles.secondLevelBlock, {
-								[styles.secondLevelBlockActive]: isOpen.includes(q._id.secondCategory),
-							})}
-						>
-							{buildThirdLevel(q.pages, menuItem.route)}
-						</div>
-					</div>
-				))}
-			</div>
-		)
-	}
+				{menu.map(q => {
+					if (q.pages.map(p => p._id).includes(router.asPath.split('/')[2])) {
+						q.isOpened = true;
+					}
 
-	const buildThirdLevel = (pages: PageItem[], route: string) => {
-		return pages.map(w => (
+					return (
+						<div key={q._id.secondCategory}>
+							<div className={styles.secondLevel} onClick={() => openSecondBLock(q._id.secondCategory)}>
+								{q._id.secondCategory}
+							</div>
+							<div
+								className={cn(styles.secondLevelBlock, {
+									[styles.secondLevelBlockActive]: q.isOpened,
+								})}
+							>
+								{buildThirdLevel(q.pages, menuItem.route)}
+							</div>
+						</div>
+					);
+				})}
+			</div>
+		);
+	};
+
+	const buildThirdLevel = (pages: PageItem[], rotue: string) => {
+		return pages.map(p => (
 			<Link
-				key={w._id}
-				href={`/${route}/${w.alias}`}
+				key={p._id}
+				href={`/${rotue}/${p._id}`}
 				className={cn(styles.thirdLevel, {
-					[styles.thirdLevelActive]: `/${route}/${w.alias}` === router.asPath,
+					[styles.thirdLevelActive]: `/${rotue}/${p._id}` === router.asPath,
 				})}
 			>
-				{w.title}
+				{p.title}
 			</Link>
-		))
-	}
+		));
+	};
 
-	return <div className={styles.menu}>{buildFirstLevel()}</div>
-}
+	return <div className={styles.menu}>{buildFirstLevel()}</div>;
+};
+
+export default Menu;

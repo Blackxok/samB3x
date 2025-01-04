@@ -1,16 +1,18 @@
-import cn from 'classnames'
-import style from './card.module.css'
-import { CardProps } from './card.props'
+import { CardProps } from './card.props';
+import styles from './card.module.css';
+import cn from 'classnames';
 
-export default function Card({ children, color, className, ...props }: CardProps): JSX.Element {
+const Card = ({ children, color, className, ...props }: CardProps): JSX.Element => {
 	return (
 		<div
-			className={cn(style.card, className, {
-				[style.primary]: color === 'primary',
+			className={cn(styles.card, className, {
+				[styles.primary]: color === 'primary',
 			})}
 			{...props}
 		>
 			{children}
 		</div>
-	)
-}
+	);
+};
+
+export default Card;

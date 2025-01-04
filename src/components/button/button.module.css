@@ -6,6 +6,9 @@
 	border: none;
 	border-radius: 5px;
 	font-size: 14px;
+	margin-right: 5px;
+	margin-top: 5px;
+	transition: all 0.2s ease;
 }
 
 .primary {
@@ -29,15 +32,16 @@
 }
 
 .arrow {
-	margin-left: 10px;
 	display: inline-block;
+	margin-left: 10px;
 }
 
 .down {
 	transform: rotate(90deg);
+	transition: all 0.2s ease;
 }
 
-.ghost:hover svg,
-.primary svg {
+.primary svg,
+.ghost:hover svg {
 	fill: var(--white);
 }

@@ -1,14 +1,9 @@
-import { Heading, Tag } from '../../components'
-import styles from './c-p-com.module.css'
-import { CoursePageComponentProps } from './c-p-com.props'
+import { CoursePageComponentProps } from './course-page-component.props';
+import styles from './course-page-component.module.css';
+import cn from 'classnames';
+import { Heading, Tag } from '../../components';
 
-const CoursePageComponent = ({
-	firstCategory,
-	page,
-	products,
-}: CoursePageComponentProps): JSX.Element => {
-	console.log(page.title)
-
+const CoursePageComponent = ({ firstCategory, page, products }: CoursePageComponentProps): JSX.Element => {
 	return (
 		<div className={styles.wrapper}>
 			{/* TITLE */}
@@ -23,7 +18,7 @@ const CoursePageComponent = ({
 			{/* VACATIONS */}
 			<div className={styles.hhTitle}>
 				<Heading tag='h2'>Vacations - {page.category}</Heading>
-				<Tag color='re' size='m'>
+				<Tag color='red' size='m'>
 					hh.uz
 				</Tag>
 			</div>
@@ -31,7 +26,7 @@ const CoursePageComponent = ({
 			{/* HHDATA */}
 			<div>HHDATA</div>
 		</div>
-	)
-}
+	);
+};
 
-export default CoursePageComponent
+export default CoursePageComponent;

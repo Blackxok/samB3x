@@ -1,63 +1,70 @@
 import axios from 'axios'
 import { GetServerSideProps } from 'next'
 import { useState } from 'react'
-import { Button, Card, Heading, Input, Rating, Tag, Text } from '../components'
-import Textarea from '../components/textarea/textarea'
-import { MenuItem } from '../interface/menu.interface'
+import { Button, Card, Heading, Input, Rating, Tag, Text, TextArea } from '../components'
+import { MenuItem } from '../interfaces/menu.interface'
 import { withLayout } from '../layout/layout'
 
-function Home({ firstCategory, menu }: HomeProps): JSX.Element {
-	const [isClicked, setIsClicked] = useState(false)
+const Index = (): JSX.Element => {
+	const [isClick, setIsClick] = useState(false)
 	const [rating, setRating] = useState<number>(4)
 
 	return (
 		<>
-			<Heading tag='h1'>Assalomu alekum</Heading>
-			<Text>something</Text>
-			<Tag color='re'>some</Tag>
-			<Tag color='gr'>some</Tag>
-			<Tag color='pr'>some</Tag>
-			<Button appearance='primary' arrow='right'>
-				Button3
-			</Button>
+			<Heading tag='h2'>Heading</Heading>
+			<Text size='s'>Text</Text>
+			<Tag size='s' color='red'>
+				Red
+			</Tag>
+			<Tag size='m' color='green'>
+				Green
+			</Tag>
+			<br />
+			<Button appearance='primary'>Primary</Button>
+			<Button appearance='ghost'>Ghost</Button>
 			<Button
 				appearance='ghost'
-				arrow={isClicked ? 'down' : 'right'}
-				onClick={() => setIsClicked(e => !e)}
+				arrow={isClick ? 'down' : 'right'}
+				onClick={() => setIsClick(prev => !prev)}
 			>
-				Button3
+				Arrow
 			</Button>
-			<br />
-			<br />
-			<Input placeholder='Enter your text' />
-			<br />
-			<br />
-			<Textarea placeholder='Text' />
-			<br />
-			<Rating rating={rating} isEditable={true} setRating={setRating} />
+			<Button appearance='primary' arrow='down'>
+				Down
+			</Button>
 
-			<Card color='white' style={{ marginTop: '20px' }}>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, maiores!
-			</Card>
-			<Card color='primary' style={{ marginTop: '20px' }}>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, maiores!
+			<br />
+
+			<Input placeholder='Enter' />
+			<div>
+				<TextArea placeholder='Message' />
+			</div>
+
+			<br />
+
+			<Rating rating={rating} isEditabled={true} setRating={setRating} />
+
+			<Card color='white' style={{ marginTop: '30px' }}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sunt delectus ipsum
+				accusantium. Quaerat necessitatibus laborum cum quis veniam. Eveniet?
 			</Card>
 
-			<ol>
-				{menu.map(m => (
-					<li key={m._id.secondCategory}>{m._id.secondCategory}</li>
-				))}
-			</ol>
+			<Card color='primary' style={{ marginTop: '30px' }}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sunt delectus ipsum
+				accusantium. Quaerat necessitatibus laborum cum quis veniam. Eveniet?
+			</Card>
 		</>
 	)
 }
-export default withLayout(Home)
+
+export default withLayout(Index)
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-	const firstCategory = 0
-	const { data: menu } = await axios.post<MenuItem[]>('http://localhost:3000/api/page-find', {
-		firstCategory,
-	})
+	const firstCategory = 1
+	const { data: menu } = await axios.post<MenuItem[]>(
+		`${process.env.NEXT_PUBLIC_DOMAIN}/api/page-find`,
+		{ firstCategory },
+	)
 
 	return {
 		props: {

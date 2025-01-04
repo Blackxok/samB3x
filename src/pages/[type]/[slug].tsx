@@ -1,61 +1,43 @@
-import { MenuItem } from '@/src/interface/menu.interface'
-import { PageModel } from '@/src/interface/page.interface'
-import { withLayout } from '@/src/layout/layout'
-import CoursePageComponent from '@/src/p-com/c-p-com/c-p-com'
-import axios from 'axios'
-import { GetServerSideProps } from 'next'
+import { GetServerSideProps } from 'next';
+import { withLayout } from '../../layout/layout';
+import axios from 'axios';
+import { MenuItem } from '../../interfaces/menu.interface';
+import { PageModel } from '../../interfaces/page.interface';
+import { ProductModel } from '../../interfaces/product.interface';
+import { firstLevelMenu } from '../../helpers/constants';
+import CoursePageComponent from '../../page-components/course-page-component/course-page-component';
 
-function Index({ menu, page, products, firstCategory }: PageProps) {
-	return <CoursePageComponent products={products} firstCategory={firstCategory} page={page} />
-}
+const Index = ({ products, firstCategory, page }: PageProps) => {
+	return <CoursePageComponent products={products} firstCategory={firstCategory} page={page} />;
+};
 
-export default withLayout(Index)
+export default withLayout(Index);
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async ({ query }) => {
-	const { slug } = query
-	const firstCategory = 0
+	const { slug, type } = query;
 
 	if (!slug) {
-		return {
-			notFound: true,
-		}
+		return { notFound: true };
 	}
 
-	try {
-		const { data: menu } = await axios.post<MenuItem[]>(
-			`${process.env.NEXT_PUBLIC_API_URL}/api/page-find`,
-			{ firstCategory },
-		)
+	const firstCategoryItem = firstLevelMenu.find(c => c.route === type);
 
-		const { data: page } = await axios.get<PageModel>(
-			`${process.env.NEXT_PUBLIC_API_URL}/api/page-find/${slug}`,
-		)
+	const { data: menu } = await axios.post<MenuItem[]>(`${process.env.NEXT_PUBLIC_DOMAIN}/api/page-find`, {
+		firstCategory: firstCategoryItem.id,
+	});
+	const { data: page } = await axios.get<PageModel>(`${process.env.NEXT_PUBLIC_DOMAIN}/api/page-find/${slug}`);
+	const { data: products } = await axios.post<ProductModel[]>(`${process.env.NEXT_PUBLIC_DOMAIN}/api/product-find`, {
+		category: slug,
+	});
 
-		const { data: products } = await axios.post<ProductModel[]>(
-			`${process.env.NEXT_PUBLIC_API_URL}/api/product-find`,
-			{ category: slug },
-		)
+	return {
+		props: { menu, page, products, firstCategory: firstCategoryItem.id },
+	};
+};
 
-		return {
-			props: { menu, page, products, firstCategory },
-		}
-	} catch (error) {
-		console.error('Data olishda xato:', error)
-		return {
-			props: {
-				menu: [],
-				page: {} as PageModel,
-				products: [],
-				firstCategory,
-			},
-		}
-	}
+interface PageProps extends Record<string, unknown> {
+	menu: MenuItem[];
+	page: PageModel;
+	products: ProductModel[];
+	firstCategory: number;
 }
-
-export interface PageProps extends Record<string, unknown> {
-	menu: MenuItem[]
-	page: PageModel
-	products: ProductModel[]
-	firstCategory: number
-}
-

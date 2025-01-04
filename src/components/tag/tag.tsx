@@ -1,25 +1,22 @@
-import cn from 'classnames'
-import style from './tag.module.css'
-import { TagProps } from './tag.props'
+import { TagProps } from './tag.props';
+import styles from './tag.module.css';
+import cn from 'classnames';
 
-export default function Tag({
-	size = 'm',
-	color = 'pr',
-	children,
-	...props
-}: TagProps): JSX.Element {
+const Tag = ({ size = 'm', color = 'primary', children, ...props }: TagProps): JSX.Element => {
 	return (
 		<div
-			className={cn(style.tag, {
-				[style.s]: size === 's',
-				[style.m]: size === 'm',
-				[style.pr]: color === 'pr',
-				[style.gr]: color === 'gr',
-				[style.re]: color === 're',
+			className={cn(styles.tag, {
+				[styles.s]: size === 's',
+				[styles.m]: size === 'm',
+				[styles.red]: color === 'red',
+				[styles.primary]: color === 'primary',
+				[styles.green]: color === 'green',
 			})}
 			{...props}
 		>
 			{children}
 		</div>
-	)
-}
+	);
+};
+
+export default Tag;

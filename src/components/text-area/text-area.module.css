@@ -1,4 +1,4 @@
-.input {
+.textArea {
 	padding: 7px 15px;
 	color: var(--black);
 	border: none;
@@ -9,8 +9,9 @@
 	line-height: 22px;
 	border-radius: 5px;
 	font-family: var(--font-family);
+	width: 100%;
 }
 
-.input::placeholder {
+.textArea::placeholder {
 	color: var(--gray);
 }

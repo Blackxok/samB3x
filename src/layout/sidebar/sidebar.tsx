@@ -1,20 +1,22 @@
-import cn from 'classnames'
-import Link from 'next/link'
-import { Fa500Px } from 'react-icons/fa'
-import Menu from '../menu/menu'
-import styles from './sidebar.module.css'
-import { SidebarProps } from './sidebar.props'
+import Menu from '../menu/menu';
+import { SidebarProps } from './header.props';
+import cn from 'classnames';
+import styles from './sidebar.module.css';
+import Link from 'next/link';
+import Logo from '../logo.svg';
+import { Divider } from '../../components';
 
-export default function Sidebar({ className, ...props }: SidebarProps): JSX.Element {
+const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
 	return (
 		<div className={cn(className, styles.sidebar)} {...props}>
-			<Link href='/'>
-				<div className={styles.logo}>
-					<Fa500Px className={styles.logoIcon} />
-					Logo
-				</div>
+			<Link href={'/'}>
+				<Logo />
+				<Divider />
 			</Link>
+			<div>Search...</div>
 			<Menu />
 		</div>
-	)
-}
+	);
+};
+
+export default Sidebar;

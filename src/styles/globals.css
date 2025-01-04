@@ -8,7 +8,7 @@
 
 body {
 	font-family: var(--font-family);
-	background-color: rgb(220, 239, 245);
+	background-color: beige;
 }
 
 a {
@@ -18,11 +18,6 @@ a {
 
 ul {
 	list-style: none;
-}
-
-#nprogress .bar {
-	background-color: black !important;
-	height: 10px;
 }
 
 :root {

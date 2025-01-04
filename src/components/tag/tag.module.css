@@ -1,29 +1,36 @@
 .tag {
 	display: inline-block;
-	margin: 5px 5px 0 0;
+	margin-right: 5px;
+	margin-top: 5px;
 	border-radius: 5px;
 }
 
 .s {
 	padding: 5px 10px;
 	font-size: 12px;
+	line-height: 12px;
 }
+
 .m {
 	padding: 5px 10px;
-	font-size: 12px;
+	font-size: 14px;
+	line-height: 14px;
 }
-.re {
+
+.red {
 	color: var(--white);
-	background: red;
+	background-color: #de0000;
 	font-weight: bold;
 }
-.gr {
+
+.green {
 	color: var(--green);
-	background: var(--green-light);
+	background-color: var(--green-light);
 	font-weight: bold;
 }
-.pr {
+
+.primary {
 	color: var(--primary);
-	background: transparent;
+	background-color: none;
 	border: 1px solid var(--primary);
 }
