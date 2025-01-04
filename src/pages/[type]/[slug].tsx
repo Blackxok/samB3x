@@ -5,9 +5,7 @@ import axios from 'axios'
 import { GetServerSideProps } from 'next'
 
 function Index({ menu, page, products }: PageProps) {
-	console.log(products)
-
-	return <div>in the slug</div>
+	return <div>{products.length}</div>
 }
 
 export default withLayout(Index)
@@ -18,10 +16,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async ({ query 
 
 	if (!slug) {
 		return {
-			redirect: {
-				destination: '/login',
-				permanent: false,
-			},
+			notFound: true,
 		}
 	}
 	const { data: menu } = await axios.post<MenuItem[]>(
@@ -38,11 +33,12 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async ({ query 
 		{ category: slug },
 	)
 
-	return { props: { menu, page, products } }
+	return { props: { menu, page, products, firstCategory } }
 }
 
 export interface PageProps extends Record<string, unknown> {
 	menu: MenuItem[]
 	page: PageModel[]
 	products: ProductModel[]
+	firstCategory: number
 }

@@ -3,16 +3,27 @@ import { IfirstLevelMenu, PageItem } from '@/src/interface/menu.interface'
 import { PageCategory } from '@/src/interface/page.interface'
 import cn from 'classnames'
 import Link from 'next/link'
-import { useContext } from 'react'
+import { useRouter } from 'next/router'
+import { useContext, useState } from 'react'
 import { FaBook, FaChalkboardTeacher } from 'react-icons/fa'
 import styles from './menu.module.css'
 
-const firstLevelMenu: IfirstLevelMenu[] = [
+export const firstLevelMenu: IfirstLevelMenu[] = [
 	{ route: 'courses', name: 'Courses', icon: <FaChalkboardTeacher />, id: PageCategory.Courses },
 	{ route: 'books', name: 'Books', icon: <FaBook />, id: PageCategory.Books },
 ]
 export default function Menu(): JSX.Element {
 	const { menu, firstCategory, setMenu } = useContext(AppContext)
+	const [isOpen, setIsOpen] = useState<string[]>([])
+	const router = useRouter()
+
+	const toggleCategories = (secondCategory: string) => {
+		setIsOpen(prev =>
+			prev.includes(secondCategory)
+				? prev.filter(e => e !== secondCategory)
+				: [...prev, secondCategory],
+		)
+	}
 
 	const buildFirstLevel = () => {
 		return (
@@ -42,10 +53,15 @@ export default function Menu(): JSX.Element {
 			<div className={styles.secondBlock}>
 				{menu.map(q => (
 					<div key={q._id.secondCategory}>
-						<div className={styles.secondLevel}>{q._id.secondCategory}</div>
+						<div
+							className={styles.secondLevel}
+							onClick={() => toggleCategories(q._id.secondCategory)}
+						>
+							{q._id.secondCategory}
+						</div>
 						<div
 							className={cn(styles.secondLevelBlock, {
-								[styles.secondLevelBlockActive]: q.isOpen,
+								[styles.secondLevelBlockActive]: isOpen.includes(q._id.secondCategory),
 							})}
 						>
 							{buildThirdLevel(q.pages, menuItem.route)}
@@ -62,10 +78,10 @@ export default function Menu(): JSX.Element {
 				key={w._id}
 				href={`/${route}/${w.alias}`}
 				className={cn(styles.thirdLevel, {
-					[styles.thirdLevelActive]: true,
+					[styles.thirdLevelActive]: `/${route}/${w.alias}` === router.asPath,
 				})}
 			>
-				{w.title}17.42
+				{w.title}
 			</Link>
 		))
 	}
