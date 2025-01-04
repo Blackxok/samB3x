@@ -1,9 +1,13 @@
-import { CoursePageComponentProps } from './course-page-component.props';
-import styles from './course-page-component.module.css';
-import cn from 'classnames';
-import { Heading, Tag } from '../../components';
+import { Heading, HhData, Tag } from '../../components'
+import styles from './course-page-component.module.css'
+import { CoursePageComponentProps } from './course-page-component.props'
 
-const CoursePageComponent = ({ firstCategory, page, products }: CoursePageComponentProps): JSX.Element => {
+const CoursePageComponent = ({
+	firstCategory,
+	page,
+	products,
+}: CoursePageComponentProps): JSX.Element => {
+
 	return (
 		<div className={styles.wrapper}>
 			{/* TITLE */}
@@ -24,9 +28,9 @@ const CoursePageComponent = ({ firstCategory, page, products }: CoursePageCompon
 			</div>
 
 			{/* HHDATA */}
-			<div>HHDATA</div>
+			{page.hh && <HhData {...page.hh} />}
 		</div>
-	);
-};
+	)
+}
 
-export default CoursePageComponent;
+export default CoursePageComponent
