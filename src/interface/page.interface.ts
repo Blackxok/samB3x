@@ -18,10 +18,11 @@ export interface AdvantageData {
 
 export interface PageModel {
 	_id: string
-	title: string
 	alias: string
+	title: string
 	tags: string[]
 	description: string
 	hh: HhData
 	advantages: AdvantageData[]
+	category: string
 }

@@ -54,7 +54,7 @@ function Home({ firstCategory, menu }: HomeProps): JSX.Element {
 export default withLayout(Home)
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-	const firstCategory = 1
+	const firstCategory = 0
 	const { data: menu } = await axios.post<MenuItem[]>('http://localhost:3000/api/page-find', {
 		firstCategory,
 	})
