@@ -1,0 +1,70 @@
+.advantage {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	margin: 5px 0;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.advantage:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #333;
+}
+
+.description {
+	font-size: 1rem;
+	color: #333;
+}
+
+.vLine {
+	width: 1px;
+	height: 40px;
+	background-color: #ddd;
+	margin: 0 1rem;
+}
+
+.checkIcon {
+	height: min-content;
+	font-size: 5rem;
+	color: #4caf50;
+	background-color: #e8f5e9;
+	border-radius: 50%;
+	padding: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+	.advantage {
+		flex-direction: column;
+		gap: 0.1rem;
+	}
+
+	.title {
+		font-size: 1rem;
+	}
+
+	.description {
+		font-size: 0.9rem;
+	}
+
+	.vLine {
+		display: none;
+	}
+
+	.checkIcon {
+		font-size: 2rem;
+	}
+}

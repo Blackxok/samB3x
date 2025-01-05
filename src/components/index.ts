@@ -1,3 +1,4 @@
+export { default as Advantages } from './advantages/advantages'
 export { default as Button } from './button/button'
 export { default as Card } from './card/card'
 export { default as Divider } from './divider/divider'

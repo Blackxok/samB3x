@@ -1,28 +1,28 @@
-import Link from 'next/link';
-import { useContext } from 'react';
-import { AppContext } from '../../context/app.cotext';
-import { firstLevelMenu } from '../../helpers/constants';
-import styles from './menu.module.css';
-import cn from 'classnames';
-import { IFirstLevelMenu, PageItem } from '../../interfaces/menu.interface';
-import { useRouter } from 'next/router';
+import cn from 'classnames'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useContext } from 'react'
+import { AppContext } from '../../context/app.cotext'
+import { firstLevelMenu } from '../../helpers/constants'
+import { IFirstLevelMenu, PageItem } from '../../interfaces/menu.interface'
+import styles from './menu.module.css'
 
 const Menu = (): JSX.Element => {
-	const { menu, firstCategory, setMenu } = useContext(AppContext);
-	const router = useRouter();
+	const { menu, firstCategory, setMenu } = useContext(AppContext)
+	const router = useRouter()
 
 	const openSecondBLock = (category: string) => {
 		setMenu &&
 			setMenu(
 				menu.map(c => {
 					if (c._id.secondCategory === category) {
-						c.isOpened = !c.isOpened;
+						c.isOpened = !c.isOpened
 					}
 
-					return c;
-				})
-			);
-	};
+					return c
+				}),
+			)
+	}
 
 	const buildFirstLevel = () => {
 		return (
@@ -45,20 +45,23 @@ const Menu = (): JSX.Element => {
 					</div>
 				))}
 			</>
-		);
-	};
+		)
+	}
 
 	const buildSecondLevel = (menuItem: IFirstLevelMenu) => {
 		return (
 			<div className={styles.secondBlock}>
 				{menu.map(q => {
 					if (q.pages.map(p => p._id).includes(router.asPath.split('/')[2])) {
-						q.isOpened = true;
+						q.isOpened = true
 					}
 
 					return (
 						<div key={q._id.secondCategory}>
-							<div className={styles.secondLevel} onClick={() => openSecondBLock(q._id.secondCategory)}>
+							<div
+								className={styles.secondLevel}
+								onClick={() => openSecondBLock(q._id.secondCategory)}
+							>
 								{q._id.secondCategory}
 							</div>
 							<div
@@ -69,11 +72,11 @@ const Menu = (): JSX.Element => {
 								{buildThirdLevel(q.pages, menuItem.route)}
 							</div>
 						</div>
-					);
+					)
 				})}
 			</div>
-		);
-	};
+		)
+	}
 
 	const buildThirdLevel = (pages: PageItem[], rotue: string) => {
 		return pages.map(p => (
@@ -86,10 +89,10 @@ const Menu = (): JSX.Element => {
 			>
 				{p.title}
 			</Link>
-		));
-	};
+		))
+	}
 
-	return <div className={styles.menu}>{buildFirstLevel()}</div>;
-};
+	return <div className={styles.menu}>{buildFirstLevel()}</div>
+}
 
-export default Menu;
+export default Menu

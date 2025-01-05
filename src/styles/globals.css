@@ -8,7 +8,6 @@
 
 body {
 	font-family: var(--font-family);
-	background-color: beige;
 }
 
 a {
@@ -22,15 +21,16 @@ ul {
 
 :root {
 	--font-family: 'Roboto', sans-serif;
-	--black: #3b434e;
+	--black: #000000;
 	--gray-light: #aeaeae;
 	--gray: #a4a4a4;
-	--gray-dark: #787d85;
-	--white: rgb(245, 245, 204);
-	--primary: #140342;
+	--gray-dark: #485c7c;
+	--white: rgb(234, 235, 234);
+	--primary: #07133d;
 	--primary-hover: #08011a;
-	--red: #fc836d;
-	--red-light: #d18476;
-	--green: #1dc37e;
-	--green-light: #c8f8e4;
+	--red: #ff6449;
+	--red-light: #ff8874;
+	--green: #0fbd74;
+	--green-light: #cbffe9;
+	--menu-sidebar: #d3deff;
 }
