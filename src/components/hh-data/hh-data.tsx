@@ -17,7 +17,7 @@ export default function HhData({
 			<Card className={styles.salary}>
 				<div>
 					<div className={styles.title}>Junior</div>
-					<div className={styles.salaryValue}>{juniorSalary}</div>
+					<div className={styles.salaryValue}>{juniorSalary}$</div>
 					<div className={styles.rate}>
 						<MdStar size={40} color='red' />
 						<MdStar size={40} />
@@ -26,7 +26,7 @@ export default function HhData({
 				</div>
 				<div>
 					<div className={styles.title}>Middle</div>
-					<div className={styles.salaryValue}>{middleSalary}</div>
+					<div className={styles.salaryValue}>{middleSalary}$</div>
 					<div className={styles.rate}>
 						<MdStar size={40} color='red' />
 						<MdStar size={40} color='red' />
@@ -35,7 +35,7 @@ export default function HhData({
 				</div>
 				<div>
 					<div className={styles.title}>Senior</div>
-					<div className={styles.salaryValue}>{seniorSalary}</div>
+					<div className={styles.salaryValue}>{seniorSalary}$</div>
 					<div className={styles.rate}>
 						<MdStar size={40} color='red' />
 						<MdStar size={40} color='red' />

@@ -16,7 +16,8 @@
 }
 
 .title {
-	font-size: 1.2rem;
+	text-align: center;
+	font-size: 1rem;
 	font-weight: 600;
 	color: #333;
 }
@@ -28,14 +29,14 @@
 
 .vLine {
 	width: 1px;
-	height: 40px;
+	height: 2.5rem;
 	background-color: #ddd;
-	margin: 0 1rem;
+	margin: 0 0.3rem;
 }
 
 .checkIcon {
 	height: min-content;
-	font-size: 5rem;
+	font-size: 3rem;
 	color: #4caf50;
 	background-color: #e8f5e9;
 	border-radius: 50%;

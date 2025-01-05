@@ -1,22 +1,26 @@
-import { Advantages, Heading, HhData, Tag, Text } from '../../components'
+import { SortEnum } from '@/src/components/sort/sort.props'
+import { useReducer } from 'react'
+import { Advantages, Heading, HhData, Product, Sort, Tag, Text } from '../../components'
 import styles from './course-page-component.module.css'
 import { CoursePageComponentProps } from './course-page-component.props'
+import { sortReducer } from './sort.reducer'
 
-const CoursePageComponent = ({
-	firstCategory,
-	page,
-	products,
-}: CoursePageComponentProps): JSX.Element => {
+const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.Element => {
+	const [state, dispatch] = useReducer(sortReducer, { sort: SortEnum.Rating, products: products })
+
+	const setSort = (sort: SortEnum) => {
+		dispatch({ type: sort })
+	}
 	return (
 		<div className={styles.wrapper}>
 			{/* TITLE */}
 			<div className={styles.title}>
 				<Heading tag='h1'>{page.title}</Heading>
-				<div>Sort...</div>
+				<Sort sort={state.sort} setSort={setSort} />
 			</div>
 
 			{/* PRODUCTS */}
-			<div>PRODUCTS</div>
+			{state.products && state.products.map(e => <Product key={e._id} product={e} />)}
 
 			{/* VACATIONS */}
 			<div className={styles.hhTitle}>
