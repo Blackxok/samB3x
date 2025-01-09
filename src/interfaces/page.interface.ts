@@ -1,6 +1,6 @@
 export enum PageCategory {
-	Courses,
 	Books,
+	Courses,
 }
 
 export interface HhData {

@@ -10,6 +10,7 @@ import styles from './menu.module.css'
 const Menu = (): JSX.Element => {
 	const { menu, firstCategory, setMenu } = useContext(AppContext)
 	const router = useRouter()
+	// console.log(menu)
 
 	const openSecondBLock = (category: string) => {
 		setMenu &&
@@ -18,7 +19,6 @@ const Menu = (): JSX.Element => {
 					if (c._id.secondCategory === category) {
 						c.isOpened = !c.isOpened
 					}
-
 					return c
 				}),
 			)
@@ -40,7 +40,7 @@ const Menu = (): JSX.Element => {
 									<span>{c.name}</span>
 								</div>
 							</Link>
-							{c.id == firstCategory && buildSecondLevel(c)}
+							{c.id === firstCategory && buildSecondLevel(c)}
 						</>
 					</div>
 				))}

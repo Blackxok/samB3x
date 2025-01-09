@@ -20,7 +20,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async ({ query 
 		return { notFound: true }
 	}
 
-	const firstCategoryItem = firstLevelMenu.find(c => c.route === type)
+	const firstCategoryItem = firstLevelMenu.find(c => c.route === type) ?? { id: 0 }
 
 	const { data: menu } = await axios.post<MenuItem[]>(
 		`${process.env.NEXT_PUBLIC_DOMAIN}/api/page-find`,
