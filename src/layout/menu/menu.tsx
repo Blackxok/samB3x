@@ -2,11 +2,11 @@ import cn from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useContext } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import { AppContext } from '../../context/app.cotext'
 import { firstLevelMenu } from '../../helpers/constants'
 import { IFirstLevelMenu, PageItem } from '../../interfaces/menu.interface'
 import styles from './menu.module.css'
-
 const Menu = (): JSX.Element => {
 	const { menu, firstCategory, setMenu } = useContext(AppContext)
 	const router = useRouter()
@@ -28,7 +28,7 @@ const Menu = (): JSX.Element => {
 		return (
 			<>
 				{firstLevelMenu.map(c => (
-					<div key={c.route}>
+					<div key={uuidv4()}>
 						<>
 							<Link href={`/${c.route}`}>
 								<div
@@ -57,7 +57,7 @@ const Menu = (): JSX.Element => {
 					}
 
 					return (
-						<div key={q._id.secondCategory}>
+						<div key={uuidv4()}>
 							<div
 								className={styles.secondLevel}
 								onClick={() => openSecondBLock(q._id.secondCategory)}
@@ -81,7 +81,7 @@ const Menu = (): JSX.Element => {
 	const buildThirdLevel = (pages: PageItem[], rotue: string) => {
 		return pages.map(p => (
 			<Link
-				key={p._id}
+				key={uuidv4()}
 				href={`/${rotue}/${p._id}`}
 				className={cn(styles.thirdLevel, {
 					[styles.thirdLevelActive]: `/${rotue}/${p._id}` === router.asPath,

@@ -1,5 +1,6 @@
 import { SortEnum } from '@/src/components/sort/sort.props'
 import { useReducer } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import { Advantages, Heading, HhData, Product, Sort, Tag, Text } from '../../components'
 import styles from './course-page-component.module.css'
 import { CoursePageComponentProps } from './course-page-component.props'
@@ -20,7 +21,7 @@ const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.
 			</div>
 
 			{/* PRODUCTS */}
-			{state.products && state.products.map(e => <Product key={e._id} product={e} />)}
+			{state.products && state.products.map(e => <Product key={uuidv4()} product={e} />)}
 
 			{/* VACATIONS */}
 			<div className={styles.hhTitle}>
@@ -47,7 +48,7 @@ const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.
 			<Heading tag='h2'>Skills</Heading>
 			{page.tags.length > 0 &&
 				page.tags.map(t => (
-					<Tag color='primary' key={t}>
+					<Tag color='primary' key={uuidv4()}>
 						{t}
 					</Tag>
 				))}

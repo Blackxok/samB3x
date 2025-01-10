@@ -11,6 +11,8 @@ import Review from '../review/review'
 import Tag from '../tag/tag'
 import styles from './product.module.css'
 import { ProductProps } from './product.props'
+import { v4 as uuidv4 } from 'uuid';
+
 
 const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
 	const [reviewOpen, setReviewOpen] = useState<boolean>(false)
@@ -42,7 +44,7 @@ const Product = ({ product, className, ...props }: ProductProps): JSX.Element =>
 				<div className={styles.tags}>
 					{product.tags.length &&
 						product.tags.map(t => (
-							<Tag key={t} className={styles.category} color={'primary'}>
+							<Tag key={uuidv4()} className={styles.category} color={'primary'}>
 								{t}
 							</Tag>
 						))}
@@ -58,7 +60,7 @@ const Product = ({ product, className, ...props }: ProductProps): JSX.Element =>
 				<div className={styles.features}>
 					{product.characteristics.length &&
 						product.characteristics.map(ch => (
-							<div className={styles.characteristic} key={ch.name}>
+							<div className={styles.characteristic} key={uuidv4()}>
 								<span className={styles.characteristicName}>{ch.name}</span>
 								<span className={styles.characteristicDots}></span>
 								<span className={styles.characteristicValue}>{ch.value}</span>
@@ -103,7 +105,7 @@ const Product = ({ product, className, ...props }: ProductProps): JSX.Element =>
 				})}
 			>
 				{product.reviews.map(r => (
-					<div key={r._id}>
+					<div key={uuidv4()}>
 						<Review review={r} />
 						<Divider />
 					</div>
