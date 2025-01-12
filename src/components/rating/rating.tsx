@@ -6,55 +6,60 @@ import StarIcon from './star.svg'
 
 const Rating = forwardRef(
 	(
-		{ rating, isEditabled = false, setRating, ...props }: RatingProps,
+		{ rating, isEditabled = false, setRating, error, ...props }: RatingProps,
 		ref: ForwardedRef<HTMLDivElement>,
 	): JSX.Element => {
-		const [ratingArray, setRatingArray] = useState<JSX.Element[]>([])
+		const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>))
 
 		useEffect(() => {
 			renderRating(rating)
-		}, [rating, isEditabled])
+		}, [rating])
 
 		const renderRating = (currentRating: number) => {
-			setRatingArray(
-				new Array(5).fill(null).map((_, idx) => (
-					<span
-						key={idx}
-						role='button'
-						aria-label={`Rate as ${idx + 1} stars`}
-						className={cn(styles.star, {
-							[styles.filled]: idx < currentRating,
-							[styles.editable]: isEditabled,
-						})}
-						onMouseEnter={() => changeRatingDisplay(idx + 1)}
-						onMouseLeave={() => changeRatingDisplay(rating)}
-						onClick={() => clickRatingHandler(idx + 1)}
-					>
-						<StarIcon />
-					</span>
-				)),
-			)
+			const updateArray = ratingArray.map((r: JSX.Element, idx: number) => (
+				<span
+					className={cn(styles.star, {
+						[styles.filled]: idx < currentRating,
+						[styles.editable]: isEditabled,
+					})}
+					onMouseEnter={() => chnageRatingDisplay(idx + 1)}
+					onMouseLeave={() => chnageRatingDisplay(rating)}
+					onClick={() => clickRatingHandler(idx + 1)}
+				>
+					<StarIcon />
+				</span>
+			))
+
+			setRatingArray(updateArray)
 		}
 
-		const changeRatingDisplay = (index: number) => {
-			if (isEditabled) {
-				renderRating(index)
-			} else {
-				renderRating(rating)
+		const chnageRatingDisplay = (index: number) => {
+			if (!isEditabled) {
+				return
 			}
+
+			renderRating(index)
 		}
 
 		const clickRatingHandler = (index: number) => {
-			if (isEditabled && setRating) {
-				setRating(index)
+			if (!isEditabled || !setRating) {
+				return
 			}
+			setRating(index)
 		}
 
 		return (
-			<div className={styles.rating} ref={ref} {...props}>
+			<div
+				className={cn(styles.rating, {
+					[styles.error]: error,
+				})}
+				ref={ref}
+				{...props}
+			>
 				{ratingArray.map((rating, idx) => (
 					<span key={idx}>{rating}</span>
 				))}
+				{error && <span className={styles.errorMessage}>{error.message}</span>}
 			</div>
 		)
 	},
