@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
-	
+	images: {
+		domains: ['media.graphassets.com'], // Ruxsat berilgan domenlarni bu yerga qo'shing
+	},
+
 	webpack(config) {
 		const fileLoaderRule = config.module.rules.find(rule => rule.test?.test?.('.svg'))
 

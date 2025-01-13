@@ -7,10 +7,7 @@
 	font-size: 18px;
 	line-height: 25px;
 	margin-top: 20px;
-	border: 1px solid var(--gray-light);
-	padding: 5px 15px;
-	border-radius: 50px;
-	color: var(--gray-light);
+	color: var(--black);
 }
 
 .firstLevelActive,
@@ -25,8 +22,9 @@
 
 .secondBlock {
 	margin-top: 15px;
-	padding-right: 12px;
-	border-right: 1px solid var(--gray-light);
+	margin-right: 12px;
+	padding-right: 32px;
+	border-right: 1px solid #e5e5e5;
 }
 
 .secondLevel {
@@ -37,14 +35,15 @@
 	font-weight: 300;
 	font-size: 12px;
 	line-height: 16px;
-	/* width: 100%; */
-	padding: 10px;
+	width: 100%;
+	padding: 18px;
 	border-radius: 18px;
-	background-color: var(--white);
+	background-color: rgba(245, 245, 204, 0.4);
+	border: 1px solid #e5e5e5;
 }
 
-.secondLevel:hover {
-	background-color: var(--menu-sidebar);
+.secondLevelBlock {
+	overflow: hidden;
 }
 
 .secondLevelBlock {

@@ -1,8 +1,9 @@
-import { SortEnum } from '@/src/components/sort/sort.props'
-import { useReducer } from 'react'
-import { v4 as uuidv4 } from 'uuid'
+import { AnimatePresence } from 'framer-motion'
+import { useEffect, useReducer } from 'react'
 import { Advantages, Heading, HhData, Product, Sort, Tag, Text } from '../../components'
+import { SortEnum } from '../../components/sort/sort.props'
 import styles from './course-page-component.module.css'
+import { v4 as uuidv4 } from 'uuid'
 import { CoursePageComponentProps } from './course-page-component.props'
 import { sortReducer } from './sort.reducer'
 
@@ -12,6 +13,23 @@ const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.
 	const setSort = (sort: SortEnum) => {
 		dispatch({ type: sort })
 	}
+
+	useEffect(() => {
+		dispatch({ type: 'reset', initialState: products })
+	}, [products])
+
+	const spring = {
+		type: 'spring',
+		stiffness: 500,
+		damping: 10,
+	}
+
+	const animations = {
+		initial: { scale: 0 },
+		animate: { scale: 1 },
+		exit: { scale: 1 },
+	}
+
 	return (
 		<div className={styles.wrapper}>
 			{/* TITLE */}
@@ -21,7 +39,12 @@ const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.
 			</div>
 
 			{/* PRODUCTS */}
-			{state.products && state.products.map(e => <Product key={uuidv4()} product={e} />)}
+			<AnimatePresence>
+				{state.products &&
+					state.products.map((c, idx) => (
+						<Product key={uuidv4()} layout transition={spring} {...animations} product={c} />
+					))}
+			</AnimatePresence>
 
 			{/* VACATIONS */}
 			<div className={styles.hhTitle}>
@@ -34,19 +57,20 @@ const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.
 			{/* HHDATA */}
 			{page.hh && <HhData {...page.hh} />}
 
-			{/* Advantages */}
-			{page.advantages.length > 0 && (
+			{/* ADVANTAGES */}
+			{page.advantages && page.advantages.length && (
 				<>
-					<Heading tag='h2'>Advantage</Heading>
+					<Heading tag='h2'>Advantages</Heading>
 					<Advantages advantages={page.advantages} />
 				</>
 			)}
-			{/* {Description} */}
+
+			{/* DESCRIPTION */}
 			<Text>{page.description}</Text>
 
-			{/* Skills */}
+			{/* SKILLS */}
 			<Heading tag='h2'>Skills</Heading>
-			{page.tags.length > 0 &&
+			{page.tags.length &&
 				page.tags.map(t => (
 					<Tag color='primary' key={uuidv4()}>
 						{t}
