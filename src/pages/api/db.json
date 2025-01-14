@@ -464,7 +464,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -515,7 +515,7 @@
 			"hh": {
 				"count": 1200,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -557,16 +557,7 @@
 			"_id": "angular_id",
 			"category": "Angular",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Angular",
-				"MobX",
-				"State managment",
-				"NodeJS",
-				"Regex",
-				"RxJS",
-				"TypeScript",
-				"Webpack"
-			],
+			"tags": ["Angular", "MobX", "State managment", "NodeJS", "Regex", "RxJS", "TypeScript", "Webpack"],
 			"hh": {
 				"count": 900,
 				"juniorSalary": 600,
@@ -759,20 +750,7 @@
 			"_id": "nuxtjs_id",
 			"category": "NuxtJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Nuxt",
-				"VueJS",
-				"Vuex",
-				"NodeJS",
-				"SSR",
-				"SEO",
-				"CSR",
-				"API",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Nuxt", "VueJS", "Vuex", "NodeJS", "SSR", "SEO", "CSR", "API", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"hh": {
 				"count": 1600,
 				"juniorSalary": 700,
@@ -828,7 +806,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -859,7 +837,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -890,7 +868,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -921,7 +899,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -952,7 +930,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -983,7 +961,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1014,7 +992,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1045,7 +1023,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1076,7 +1054,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1107,7 +1085,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1138,7 +1116,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1169,7 +1147,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1200,7 +1178,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1231,7 +1209,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1262,7 +1240,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1696,7 +1674,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1747,7 +1725,7 @@
 			"hh": {
 				"count": 1200,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -1789,16 +1767,7 @@
 			"_id": "angular_books_id",
 			"category": "Angular",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Angular",
-				"MobX",
-				"State managment",
-				"NodeJS",
-				"Regex",
-				"RxJS",
-				"TypeScript",
-				"Webpack"
-			],
+			"tags": ["Angular", "MobX", "State managment", "NodeJS", "Regex", "RxJS", "TypeScript", "Webpack"],
 			"hh": {
 				"count": 900,
 				"juniorSalary": 600,
@@ -1991,20 +1960,7 @@
 			"_id": "nuxtjs_books_id",
 			"category": "NuxtJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Nuxt",
-				"VueJS",
-				"Vuex",
-				"NodeJS",
-				"SSR",
-				"SEO",
-				"CSR",
-				"API",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Nuxt", "VueJS", "Vuex", "NodeJS", "SSR", "SEO", "CSR", "API", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"hh": {
 				"count": 1600,
 				"juniorSalary": 700,
@@ -2060,7 +2016,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2091,7 +2047,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2122,7 +2078,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2153,7 +2109,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2184,7 +2140,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2215,7 +2171,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2246,7 +2202,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2277,7 +2233,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2308,7 +2264,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2339,7 +2295,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2370,7 +2326,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2401,7 +2357,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2432,7 +2388,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2463,7 +2419,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -2494,7 +2450,7 @@
 			"hh": {
 				"count": 1307,
 				"juniorSalary": 500,
-				"middleSalary": 1000,
+				"middleSalary": 100,
 				"seniorSalary": 1500
 			},
 			"advantages": [
@@ -3035,16 +2991,7 @@
 			"_id": "angular_id",
 			"category": "Angular",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Angular",
-				"MobX",
-				"State managment",
-				"NodeJS",
-				"Regex",
-				"RxJS",
-				"TypeScript",
-				"Webpack"
-			],
+			"tags": ["Angular", "MobX", "State managment", "NodeJS", "Regex", "RxJS", "TypeScript", "Webpack"],
 			"productId": "60637a279e11cxz63",
 			"price": 500,
 			"credit": 20,
@@ -3097,16 +3044,7 @@
 			"_id": "angular_id",
 			"category": "Angular",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Angular",
-				"MobX",
-				"State managment",
-				"NodeJS",
-				"Regex",
-				"RxJS",
-				"TypeScript",
-				"Webpack"
-			],
+			"tags": ["Angular", "MobX", "State managment", "NodeJS", "Regex", "RxJS", "TypeScript", "Webpack"],
 			"productId": "602s37axz63",
 			"images": "https://media.graphassets.com/DyS8yMsrSGCeT5JSepr3",
 			"price": 900,
@@ -3151,16 +3089,7 @@
 			"_id": "angular_id",
 			"category": "Angular",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Angular",
-				"MobX",
-				"State managment",
-				"NodeJS",
-				"Regex",
-				"RxJS",
-				"TypeScript",
-				"Webpack"
-			],
+			"tags": ["Angular", "MobX", "State managment", "NodeJS", "Regex", "RxJS", "TypeScript", "Webpack"],
 			"productId": "602xszs37axz63",
 			"price": 200,
 			"credit": 20,
@@ -3196,16 +3125,7 @@
 			"_id": "angular_id",
 			"category": "Angular",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Angular",
-				"MobX",
-				"State managment",
-				"NodeJS",
-				"Regex",
-				"RxJS",
-				"TypeScript",
-				"Webpack"
-			],
+			"tags": ["Angular", "MobX", "State managment", "NodeJS", "Regex", "RxJS", "TypeScript", "Webpack"],
 			"productId": "602xszs37axz63",
 			"images": "https://media.graphassets.com/cNgPYj3tSIa9vjLOnyp3",
 			"price": 400,
@@ -3611,16 +3531,7 @@
 			"_id": "nextjs_id",
 			"category": "NextJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Next",
-				"ReactJS",
-				"Redux toolkit",
-				"Redux",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Next", "ReactJS", "Redux toolkit", "Redux", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "08x37ax279e11cxz63",
 			"price": 500,
 			"credit": 20,
@@ -3673,16 +3584,7 @@
 			"_id": "nextjs_id",
 			"category": "NextJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Next",
-				"ReactJS",
-				"Redux toolkit",
-				"Redux",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Next", "ReactJS", "Redux toolkit", "Redux", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "8xal602s37axxzz63",
 			"images": "https://media.graphassets.com/DyS8yMsrSGCeT5JSepr3",
 			"price": 900,
@@ -3727,16 +3629,7 @@
 			"_id": "nextjs_id",
 			"category": "NextJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Next",
-				"ReactJS",
-				"Redux toolkit",
-				"Redux",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Next", "ReactJS", "Redux toolkit", "Redux", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "602xaxq1s37axz630ll",
 			"price": 200,
 			"credit": 20,
@@ -3772,16 +3665,7 @@
 			"_id": "nextjs_id",
 			"category": "NextJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Next",
-				"ReactJS",
-				"Redux toolkit",
-				"Redux",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Next", "ReactJS", "Redux toolkit", "Redux", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "6021z021x00q1s37axz63",
 			"images": "https://media.graphassets.com/cNgPYj3tSIa9vjLOnyp3",
 			"price": 400,
@@ -3827,20 +3711,7 @@
 			"_id": "nuxtjs_id",
 			"category": "NuxtJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Nuxt",
-				"VueJS",
-				"Vuex",
-				"NodeJS",
-				"SSR",
-				"SEO",
-				"CSR",
-				"API",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Nuxt", "VueJS", "Vuex", "NodeJS", "SSR", "SEO", "CSR", "API", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "o0960637ax279e11cxz",
 			"price": 500,
 			"credit": 20,
@@ -3893,20 +3764,7 @@
 			"_id": "nuxtjs_id",
 			"category": "NuxtJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Nuxt",
-				"VueJS",
-				"Vuex",
-				"NodeJS",
-				"SSR",
-				"SEO",
-				"CSR",
-				"API",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Nuxt", "VueJS", "Vuex", "NodeJS", "SSR", "SEO", "CSR", "API", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "x9602s37axxzz63",
 			"images": "https://media.graphassets.com/DyS8yMsrSGCeT5JSepr3",
 			"price": 900,
@@ -3951,20 +3809,7 @@
 			"_id": "nuxtjs_id",
 			"category": "NuxtJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Nuxt",
-				"VueJS",
-				"Vuex",
-				"NodeJS",
-				"SSR",
-				"SEO",
-				"CSR",
-				"API",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Nuxt", "VueJS", "Vuex", "NodeJS", "SSR", "SEO", "CSR", "API", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "602xaxq1s37a3z63",
 			"price": 200,
 			"credit": 20,
@@ -4000,20 +3845,7 @@
 			"_id": "nuxtjs_id",
 			"category": "NuxtJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Nuxt",
-				"VueJS",
-				"Vuex",
-				"NodeJS",
-				"SSR",
-				"SEO",
-				"CSR",
-				"API",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Nuxt", "VueJS", "Vuex", "NodeJS", "SSR", "SEO", "CSR", "API", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "99x00q1s37axz63",
 			"images": "https://media.graphassets.com/cNgPYj3tSIa9vjLOnyp3",
 			"price": 400,
@@ -4419,16 +4251,7 @@
 			"_id": "angular_books_id",
 			"category": "Angular",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Angular",
-				"MobX",
-				"State managment",
-				"NodeJS",
-				"Regex",
-				"RxJS",
-				"TypeScript",
-				"Webpack"
-			],
+			"tags": ["Angular", "MobX", "State managment", "NodeJS", "Regex", "RxJS", "TypeScript", "Webpack"],
 			"productId": "60637a279e11cxus3",
 			"price": 500,
 			"credit": 20,
@@ -4481,16 +4304,7 @@
 			"_id": "angular_books_id",
 			"category": "Angular",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Angular",
-				"MobX",
-				"State managment",
-				"NodeJS",
-				"Regex",
-				"RxJS",
-				"TypeScript",
-				"Webpack"
-			],
+			"tags": ["Angular", "MobX", "State managment", "NodeJS", "Regex", "RxJS", "TypeScript", "Webpack"],
 			"productId": "602s37axz639xs",
 			"images": "https://media.graphassets.com/DyS8yMsrSGCeT5JSepr3",
 			"price": 900,
@@ -4535,16 +4349,7 @@
 			"_id": "angular_books_id",
 			"category": "Angular",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Angular",
-				"MobX",
-				"State managment",
-				"NodeJS",
-				"Regex",
-				"RxJS",
-				"TypeScript",
-				"Webpack"
-			],
+			"tags": ["Angular", "MobX", "State managment", "NodeJS", "Regex", "RxJS", "TypeScript", "Webpack"],
 			"productId": "602xszs37au21",
 			"price": 200,
 			"credit": 20,
@@ -4580,16 +4385,7 @@
 			"_id": "angular_books_id",
 			"category": "Angular",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Angular",
-				"MobX",
-				"State managment",
-				"NodeJS",
-				"Regex",
-				"RxJS",
-				"TypeScript",
-				"Webpack"
-			],
+			"tags": ["Angular", "MobX", "State managment", "NodeJS", "Regex", "RxJS", "TypeScript", "Webpack"],
 			"productId": "602xscxz63",
 			"images": "https://media.graphassets.com/cNgPYj3tSIa9vjLOnyp3",
 			"price": 400,
@@ -4995,16 +4791,7 @@
 			"_id": "nextjs_books_id",
 			"category": "NextJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Next",
-				"ReactJS",
-				"Redux toolkit",
-				"Redux",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Next", "ReactJS", "Redux toolkit", "Redux", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "axiu7ax279e11cxz63",
 			"price": 500,
 			"credit": 20,
@@ -5057,16 +4844,7 @@
 			"_id": "nextjs_books_id",
 			"category": "NextJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Next",
-				"ReactJS",
-				"Redux toolkit",
-				"Redux",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Next", "ReactJS", "Redux toolkit", "Redux", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "8icd602s37axxzz63",
 			"images": "https://media.graphassets.com/DyS8yMsrSGCeT5JSepr3",
 			"price": 900,
@@ -5111,16 +4889,7 @@
 			"_id": "nextjs_books_id",
 			"category": "NextJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Next",
-				"ReactJS",
-				"Redux toolkit",
-				"Redux",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Next", "ReactJS", "Redux toolkit", "Redux", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "602xaxq1sc",
 			"price": 200,
 			"credit": 20,
@@ -5156,16 +4925,7 @@
 			"_id": "nextjs_books_id",
 			"category": "NextJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Next",
-				"ReactJS",
-				"Redux toolkit",
-				"Redux",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Next", "ReactJS", "Redux toolkit", "Redux", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "43finud2",
 			"images": "https://media.graphassets.com/cNgPYj3tSIa9vjLOnyp3",
 			"price": 400,
@@ -5211,20 +4971,7 @@
 			"_id": "nuxtjs_books_id",
 			"category": "NuxtJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Nuxt",
-				"VueJS",
-				"Vuex",
-				"NodeJS",
-				"SSR",
-				"SEO",
-				"CSR",
-				"API",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Nuxt", "VueJS", "Vuex", "NodeJS", "SSR", "SEO", "CSR", "API", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "icakmmsk2213",
 			"price": 500,
 			"credit": 20,
@@ -5277,20 +5024,7 @@
 			"_id": "nuxtjs_books_id",
 			"category": "NuxtJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Nuxt",
-				"VueJS",
-				"Vuex",
-				"NodeJS",
-				"SSR",
-				"SEO",
-				"CSR",
-				"API",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Nuxt", "VueJS", "Vuex", "NodeJS", "SSR", "SEO", "CSR", "API", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "xxco2s37axxzz63",
 			"images": "https://media.graphassets.com/DyS8yMsrSGCeT5JSepr3",
 			"price": 900,
@@ -5335,20 +5069,7 @@
 			"_id": "nuxtjs_books_id",
 			"category": "NuxtJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Nuxt",
-				"VueJS",
-				"Vuex",
-				"NodeJS",
-				"SSR",
-				"SEO",
-				"CSR",
-				"API",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Nuxt", "VueJS", "Vuex", "NodeJS", "SSR", "SEO", "CSR", "API", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "xcldiw21",
 			"price": 200,
 			"credit": 20,
@@ -5384,20 +5105,7 @@
 			"_id": "nuxtjs_books_id",
 			"category": "NuxtJS",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam eos rem, similique libero sunt architecto pariatur doloremque quaerat repellat porro accusamus possimus dolor consectetur alias necessitatibus tempora molestias voluptatibus dignissimos rerum, suscipit magnam facilis velit. Ratione iste officiis commodi at? Quam magnam suscipit architecto ipsa beatae fugit ea dolorem. Quaerat voluptate saepe reprehenderit temporibus excepturi voluptates quae voluptatum. Error quasi veritatis id voluptatum delectus. Doloremque accusantium aspernatur sed harum nesciunt? Dolor alias voluptas odit harum quia modi quisquam laborum et?",
-			"tags": [
-				"Nuxt",
-				"VueJS",
-				"Vuex",
-				"NodeJS",
-				"SSR",
-				"SEO",
-				"CSR",
-				"API",
-				"JWT Token",
-				"DotEnv",
-				"JSON",
-				"Webpack"
-			],
+			"tags": ["Nuxt", "VueJS", "Vuex", "NodeJS", "SSR", "SEO", "CSR", "API", "JWT Token", "DotEnv", "JSON", "Webpack"],
 			"productId": "9x00q1s37axz63scx",
 			"images": "https://media.graphassets.com/cNgPYj3tSIa9vjLOnyp3",
 			"price": 400,
