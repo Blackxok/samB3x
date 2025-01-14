@@ -1,9 +1,9 @@
 import { AnimatePresence } from 'framer-motion'
 import { useEffect, useReducer } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import { Advantages, Heading, HhData, Product, Sort, Tag, Text } from '../../components'
 import { SortEnum } from '../../components/sort/sort.props'
 import styles from './course-page-component.module.css'
-import { v4 as uuidv4 } from 'uuid'
 import { CoursePageComponentProps } from './course-page-component.props'
 import { sortReducer } from './sort.reducer'
 
@@ -20,12 +20,12 @@ const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.
 
 	const spring = {
 		type: 'spring',
-		stiffness: 500,
-		damping: 10,
+		stiffness: 900,
+		damping: 45,
 	}
 
 	const animations = {
-		initial: { scale: 0 },
+		initial: { scale: 1 },
 		animate: { scale: 1 },
 		exit: { scale: 1 },
 	}
