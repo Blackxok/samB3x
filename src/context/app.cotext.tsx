@@ -12,7 +12,6 @@ export const AppContext = createContext<IAppContext>({
 	menu: [],
 	firstCategory: PageCategory.Books,
 })
-// console.log(AppContext)
 
 export const AppContextProvider = ({
 	firstCategory,

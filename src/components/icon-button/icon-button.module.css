@@ -6,25 +6,35 @@
 	border-radius: 10px;
 	cursor: pointer;
 	border: none;
+	position: absolute;
+	top: 20px;
+	right: 20px;
 }
+
 .primary {
 	background-color: var(--primary);
 }
+
 .primary svg * {
 	fill: var(--white);
 }
+
 .primary:hover {
 	background-color: var(--primary-hover);
 }
+
 .white {
 	background-color: var(--white);
 }
+
 .white svg * {
 	fill: var(--primary);
 }
+
 .white:hover {
 	background-color: var(--primary);
 }
+
 .white:hover svg * {
 	fill: var(--white);
 }
