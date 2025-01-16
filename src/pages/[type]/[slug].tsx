@@ -5,7 +5,7 @@ import { MenuItem } from '../../interfaces/menu.interface'
 import { PageModel } from '../../interfaces/page.interface'
 import { ProductModel } from '../../interfaces/product.interface'
 import { withLayout } from '../../layout/layout'
-import CoursePageComponent from '../../page-components/course-page-component/course-page-component'
+import { CoursePageComponent } from '@/src/page-components'
 
 const Index = ({ products, firstCategory, page }: PageProps) => {
 	return <CoursePageComponent products={products} firstCategory={firstCategory} page={page} />
