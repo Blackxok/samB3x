@@ -1,5 +1,6 @@
 import cn from 'classnames'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { useState } from 'react'
 import { IconButton } from '../../components'
 import LogoIcon from '../logo.svg'
@@ -25,7 +26,9 @@ const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 	}
 	return (
 		<div className={cn(className, styles.header)} {...props}>
-			<LogoIcon />
+			<Link href={'/'}>
+				<LogoIcon />
+			</Link>
 			<IconButton icon='menu' appearance='white' onClick={toggleMenu} />
 			<motion.div
 				variants={variants}

@@ -34,7 +34,7 @@ const Navbar = () => {
 				<div className={styles.navigation}>
 					{navLinks.map((nav, idx) => (
 						<Link href={nav.route} key={idx}>
-							<Text>{nav.name}</Text>
+							<Text style={{ color: 'white' }}>{nav.name}</Text>
 						</Link>
 					))}
 					<Search />
@@ -53,7 +53,7 @@ const Navbar = () => {
 				>
 					{navLinks.map((nav, idx) => (
 						<Link href={nav.route} key={idx} className={styles.navLink}>
-							<Text>{nav.name}</Text>
+							<Text className={styles.navTitle}>{nav.name}</Text>
 						</Link>
 					))}
 					<Search className={styles.search} />

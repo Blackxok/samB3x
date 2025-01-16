@@ -1,15 +1,15 @@
+import { AppContext } from '@/src/context/app.context'
 import cn from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useContext } from 'react'
-import { AppContext } from '../../context/app.cotext'
 import { firstLevelMenu } from '../../helpers/constants'
 import { IFirstLevelMenu, PageItem } from '../../interfaces/menu.interface'
 import styles from './menu.module.css'
 
 const Menu = (): JSX.Element => {
 	const { menu, firstCategory, setMenu } = useContext(AppContext)
-	const reversedMenu = [...menu].reverse()
+	const reversedMenu = menu.length > 2 ? [...menu].reverse() : menu
 	const router = useRouter()
 
 	const openSecondBlock = (category: string) => {
@@ -23,21 +23,25 @@ const Menu = (): JSX.Element => {
 	const buildFirstLevel = () => {
 		return (
 			<>
-				{firstLevelMenu.map(c => (
-					<div key={c.route}>
-						<Link href={`/${c.route}`}>
-							<div
-								className={cn(styles.firstLevel, {
-									[styles.firstLevelActive]: c.id === firstCategory,
-								})}
-							>
-								{c.icon}
-								<span>{c.name}</span>
-							</div>
-						</Link>
-						{c.id === firstCategory && buildSecondLevel(c)}
-					</div>
-				))}
+				{firstLevelMenu.map(c => {
+					return (
+						<div key={c.route}>
+							<>
+								<Link href={`/${c.route}/${menu[0].pages[0]._id}`}>
+									<div
+										className={cn(styles.firstLevel, {
+											[styles.firstLevelActive]: c.id === firstCategory,
+										})}
+									>
+										{c.icon}
+										<span>{c.name}</span>
+									</div>
+								</Link>
+								{c.id == firstCategory && buildSecondLevel(c)}
+							</>
+						</div>
+					)
+				})}
 			</>
 		)
 	}

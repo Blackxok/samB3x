@@ -19,6 +19,11 @@ ul {
 	list-style: none;
 }
 
+#nprogress .bar {
+	background-color: var(--red) !important;
+	height: 10px;
+}
+
 :root {
 	--font-family: 'Roboto', sans-serif;
 	--black: #000000;

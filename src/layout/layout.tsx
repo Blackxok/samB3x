@@ -1,6 +1,7 @@
+import { useRouter } from 'next/router'
 import { FunctionComponent } from 'react'
 import { ScrollUp } from '../components'
-import { AppContextProvider, IAppContext } from '../context/app.cotext'
+import { AppContextProvider, IAppContext } from '../context/app.context'
 import Footer from './footer/footer'
 import Header from './header/header'
 import styles from './layout.module.css'
@@ -23,11 +24,16 @@ export const withLayout = <T extends Record<string, unknown> & IAppContext>(
 	Component: FunctionComponent<T>,
 ) => {
 	return function withLayoutComponent(props: T): JSX.Element {
+		const router = useRouter()
 		return (
 			<AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
-				<Layout>
+				{router.asPath === '/' ? (
 					<Component {...props} />
-				</Layout>
+				) : (
+					<Layout>
+						<Component {...props} />
+					</Layout>
+				)}
 			</AppContextProvider>
 		)
 	}
