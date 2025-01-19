@@ -9,7 +9,7 @@ export const siteConfig = {
 		ogImage: 'https://samb3x.vercel.app/logoPng.png',
 	},
 	baseURL: 'https://samb3x.vercel.app/',
-	logo: '../../public/logoPng.png',
+	logo: '/logo.svg',
 	logoText: 'CodeSchool',
 	favicon: '/logo.svg',
 	copyright: 'CodeSchool. Barcha huquqlar himoyalangan.',
