@@ -6,11 +6,11 @@ export const siteConfig = {
 		author: 'Doniyor Nasriddiov',
 		keyword:
 			"noniyor nasriddiov, codeschool, dasturlash kurslari, dasturlashga oid darslar, reactjs uzbek tilida, vuejs uzbek tilida, redux uzbek tilida, codeschool, codeschool academy, bepul dasturlash, rezyume yozish, portfolio, codeschool javascript, codeschool raqamli avlod, javascript, reactjs, vuejs, javascript darslari, reactjs darslari, vuejs darslari, dasturlash darslari, o'zbek tilida dasturlash, reactjs o'zbek tilida, reactjs darslari o'zbek tilida, javascript darslari, javascript darslari o'zbek tilida, dasturash darslari o'zbek tilida, dasturlashni o'rganish, dasturlash, IT loyihalar o'zbek tilida",
-		ogImage: 'https://media.graphassets.com/BW4BRUnCQJWCazTdKnVQ',
+		ogImage: '../../public/logoPng.png',
 	},
 	baseURL: 'https://samb3x-s6vi.vercel.app/',
-	logo: '../../public/logoPng.png',
+	logo: '../../public/logo.svg',
 	logoText: 'CodeSchool',
-	favicon: '/logo.svg',
+	favicon: '../../public/logo.svg',
 	copyright: 'CodeSchool. Barcha huquqlar himoyalangan.',
 }
